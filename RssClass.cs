@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace ParserConsole
+namespace Parser
 {
     [Serializable]
     [XmlRoot(ElementName="rss")]
@@ -18,14 +18,7 @@ namespace ParserConsole
     public class ChannelClass
     {
         [XmlElement(ElementName = "item")]
-        //public List<ItemClass> Items { get; set; }
         public List<LinkClass> Links { get; set; }
-    }
-
-    public class ItemClass
-    {
-        [XmlElement(ElementName = "title")]
-        public string Title { get; set; }
     }
 
     public class LinkClass
